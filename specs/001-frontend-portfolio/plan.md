@@ -18,7 +18,7 @@
 - 樣式與 UI：tailwindcss, shadcn-ui
 - 狀態管理：Zustand
 
-**Storage**: GitHub Issues API (作為技術部落格的 CMS 與免費圖片空間)  
+**Storage**: 雙 Repo 架構 (Dual Repo Architecture) - 建立一個獨立的私有 (Private) GitHub Repository，並將其 Issues API 作為無頭 CMS (Headless CMS)，用以儲存個人資料 (Profile)、作品集 (Projects) 以及技術部落格文章，確保公開原始碼與私有資料徹底分離。
 **Testing**: 
 - **Unit/Integration**: vitest (作為 TDD 的核心測試工具，搭配 `@testing-library/react`)
 - **E2E**: Playwright (模擬真實使用者路徑，涵蓋所有新功能驗收)

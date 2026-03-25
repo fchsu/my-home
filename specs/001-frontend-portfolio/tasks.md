@@ -122,14 +122,26 @@ description: "前端工程師專業個人基地之任務清單"
 
 ---
 
-## 階段 6：修潤與跨領域項目 (Polish & Cross-Cutting Concerns)
+## 階段 6：無頭 CMS 整合 (Headless CMS Integration - Private Repo)
+
+**目的**：將寫死 (Hardcoded) 於專案內的靜態個人資訊與作品集資料，全面轉移至私有 Repository 進行抓取，實踐 Dual-Repo 隱私保護架構。
+
+- [ ] T032 [P] 建立額外的私有 GitHub Repository 以做為資料庫使用，並在 `.env` 與設定檔配置對應之 `GITHUB_TOKEN` 與 Repo 名稱變數。
+- [ ] T033 擴充 `src/lib/github/api.ts` 的功能，實作通用函數以抓取指定 Label (例如 `type:profile` 或 `type:project`) 的 Issues。
+- [ ] T034 [P] 以 GitHub API 取代 `src/lib/data/profile.ts`，改為動態抓取私密 Repo Issue 內的 Profile 資料。
+- [ ] T035 [P] 以 GitHub API 取代 `src/lib/data/projects.ts`，改為動態抓取私密 Repo Issue 內的 Projects 陣列資料。
+- [ ] T036 執行 Vitest 與 Playwright 測試，確認在替換為 CMS 資料來源後，首頁 (US1, US2) 的渲染與 E2E 測試皆能成功通過。
+
+---
+
+## 階段 7：修潤與跨領域項目 (Polish & Cross-Cutting Concerns)
 
 **目的**：涵蓋與改善影響範圍超過單一使用者故事之系統項目。
 
-- [ ] T032 [P] 於 `src/app/globals.css` 中透過 TailwindCSS 強化跨平台之行動裝置響應式設計。
-- [ ] T033 於 `src/app/page.tsx` 及 `src/app/blog/[slug]/page.tsx` 注入動態之 SEO Meta 標籤。
-- [ ] T034 在所有頁面針對 Next.js 圖片與字型載入進行最佳化調整。
-- [ ] T035 驗證 `quickstart.md` 之所有指令是否能在本地端順利執行無誤。
+- [ ] T037 [P] 於 `src/app/globals.css` 中透過 TailwindCSS 強化跨平台之行動裝置響應式設計。
+- [ ] T038 於 `src/app/page.tsx` 及 `src/app/blog/[slug]/page.tsx` 注入動態之 SEO Meta 標籤。
+- [ ] T039 在所有頁面針對 Next.js 圖片與字型載入進行最佳化調整。
+- [ ] T040 驗證 `quickstart.md` 之所有指令是否能在本地端順利執行無誤。
 
 ---
 
@@ -139,8 +151,9 @@ description: "前端工程師專業個人基地之任務清單"
 
 - **基礎專案建置 (階段 1)**：無任何相依，可立即著手進行。
 - **核心基底建置 (階段 2)**：相依於階段 1 之設定，且為後續所有使用者故事之**阻塞點 (BLOCKS)**。
-- **使用者故事 (階段 3+)**：全權相依於核心基底建置。一旦完成，即可按優先順序 (P1 → P2) 著手進行。
-- **修潤與完善 (最終階段)**：需待排定的使用者故事全數完工後方能徹底執行。
+- **使用者故事 (階段 3, 4, 5)**：相依於核心基底建置，實作時先使用靜態 Mock 資料。
+- **無頭 CMS 整合 (階段 6)**：必須在基礎使用者故事 (US1, US2, US3) 的 UI 架構與單元測試都完成後，再抽換資料來源。
+- **修潤與完善 (最終階段)**：需待排定的開發項目全數完工後方能徹底執行。
 
 ### 平行開發機會探討
 

@@ -60,6 +60,10 @@
 - **FR-004**: 系統「必須」具備分類或標籤功能（例如：「前端開發」、「AI 應用」），讓使用者能輕鬆尋找特定主題的文章。
 - **FR-005**: 系統「必須」具備完整的響應式設計 (Responsive Design)，確保在桌機與行動裝置上皆提供最佳的閱讀與互動體驗。
 
+### 非功能性需求 (Non-Functional Requirements)
+
+- **NFR-001**: **靜態內容與資料庫分離 (Dual Repo Headless CMS)**：專案本身的原始碼庫「必須」保持完全公開 (Public) 且不包含任何硬編碼的私密個人資訊。所有依賴變動的內容（包含 Profile 履歷連結、Projects 網址與部落格文章），皆「必須」透過後端抓取獨立配置之「私有 GitHub Repository (Private Repo)」內的 Issues 產生。
+
 ### 測試需求 (Testing Requirements)
 
 - **TR-001**: 系統「必須」使用 Playwright 進行 E2E 自動化測試。所有新功能皆須包含 Playwright 測試案例，且必須涵蓋模擬真實使用者的操作路徑（例如：導覽、點擊連結、瀏覽文章等），以確保關鍵流程正確無誤。
