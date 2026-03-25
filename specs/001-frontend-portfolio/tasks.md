@@ -27,7 +27,7 @@ description: "前端工程師專業個人基地之任務清單"
 
 **目的**：專案初始化與建立基礎目錄結構。
 
-- [ ] T001 在專案根目錄與 `package.json` 初始化 Next.js App Router 專案，並配置 TypeScript 與 TailwindCSS。
+- [x] T001 在專案根目錄與 `package.json` 初始化 Next.js App Router 專案，並配置 TypeScript 與 TailwindCSS。
 - [ ] T002 在 `.eslintrc.js` 與 `.prettierrc` 設置 ESLint 與 Prettier 以鞏固程式碼品質。
 - [ ] T003 在 `components.json` 與 `src/components/ui/` 設置 shadcn-ui 並安裝基礎元件 (按鈕、卡片等)。
 - [ ] T004 在 `src/store/index.ts` 建立 Zustand 狀態管理架構。
