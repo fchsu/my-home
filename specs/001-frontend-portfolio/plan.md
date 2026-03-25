@@ -14,12 +14,14 @@
 **Language/Version**: TypeScript / Node.js (>= v22)  
 **Primary Dependencies**:
 
-- 核心框架：React v19, Next.js (App router)
+- 核心框架：React v19, Next.js v16 (App router)
 - 樣式與 UI：tailwindcss, shadcn-ui
 - 狀態管理：Zustand
 
 **Storage**: GitHub Issues API (作為技術部落格的 CMS 與免費圖片空間)  
-**Testing**: vitest (作為 TDD 的核心測試工具，搭配 `@testing-library/react`)  
+**Testing**: 
+- **Unit/Integration**: vitest (作為 TDD 的核心測試工具，搭配 `@testing-library/react`)
+- **E2E**: Playwright (模擬真實使用者路徑，涵蓋所有新功能驗收)
 **Target Platform**: Web 瀏覽器 (RWD 支援行動裝置與桌機)  
 **Deployment**: Vercel  
 **Project Type**: Web Application (個人網站/SSG/ISR)  
@@ -34,7 +36,7 @@
 _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
 - **I. 高程式碼品質**: 將採用 ESLint, Prettier 進行管控，並確保模組化設計。
-- **II. 測試驅動開發 (TDD)**: 已納入 vitest，並在任務中規範先寫測試。
+- **II. 測試驅動開發 (TDD) 與自動化測試**: 已納入 vitest 進行單元測試，並強制要求所有新功能必須加入 Playwright E2E 測試以模擬真實使用者互動路徑。
 - **III. 使用者體驗一致性**: 使用 shadcn-ui 提供一致的設計系統與元件庫。
 - **IV. 高效能表現**: 利用 Next.js App Router 的 React Server Components (RSC) 及 ISR 提升效能。
 - **V. 正體中文及台灣習慣用語**: 所有文件與程式碼註解依照此規範。
@@ -74,6 +76,7 @@ src/
 └── types/                # TypeScript 型別定義
 
 tests/
+├── e2e/                  # Playwright 端到端測試 (模擬真實使用者路徑)
 ├── unit/                 # Vitest 單元測試 (TDD 主要執行區域)
 └── integration/          # 整合測試
 ```

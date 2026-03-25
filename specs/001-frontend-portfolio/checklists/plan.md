@@ -8,7 +8,7 @@
 ## 1. 架構與技術脈絡 (Architecture & Context)
 
 - [x] PL-001 已正確設定指定技術堆疊 (React 19, Next.js App Router, TailwindCSS, shadcn-ui, Zustand)
-- [x] PL-002 已明列測試與部署環境 (Vitest, Vercel)
+- [x] PL-002 已明列測試與部署環境 (Vitest, Playwright, Vercel)
 - [x] PL-003 已說明 CMS 與資料來源 (GitHub Issues API)
 - [x] PL-004 已滿足專案憲章 (Constitution) 的各項要求
 
@@ -18,6 +18,7 @@
 - [x] PL-006 已說明如何整合 GitHub Issues API 與 Next.js (包含 ISR / 快取考量)
 - [x] PL-007 已確立 GitHub Issues 原生支援免費圖片網址的優勢
 - [x] PL-008 已確認 TDD 測試框架 (Vitest) 與狀態管理的適用範圍
+- [x] PL-008b 已確認 E2E 測試框架 (Playwright) 將用於涵蓋所有新功能的真實使用者路徑模擬
 
 ## 3. 資料與 API 契約 (Phase 1: Design)
 
