@@ -1,8 +1,8 @@
 <!--
 SYNC IMPACT REPORT
-Version change: 1.0.0 -> 1.1.0
+Version change: 1.1.0 -> 1.2.0
 Modified principles:
-  - Replaced template principles with 8 explicitly requested core principles.
+  - Added strict security checks principle.
 Added sections:
   - I. 高程式碼品質 (High Code Quality)
   - II. 測試驅動開發 (Test-Driven Development, TDD)
@@ -12,6 +12,7 @@ Added sections:
   - VI. 明確標示技術債 (Explicit Technical Debt Marking)
   - VII. 最小可行性產品 (Minimum Viable Product, MVP)
   - VIII. 防止過度設計 (Prevent Overdesign)
+  - IX. 嚴格安全性檢查 (Strict Security Checks)
 Removed sections:
   - Placeholder principles and generic sections
 Templates requiring updates:
@@ -54,11 +55,18 @@ Templates requiring updates:
 
 設計系統與架構時，應嚴守 YAGNI (You Aren't Gonna Need It) 原則。僅針對當前明確存在的需求進行實作，避免為了「未來可能發生」的情境預留過多不必要的抽象層或複雜程度，保持「剛好夠用」的極簡風格。
 
+### IX. 嚴格安全性檢查 (Strict Security Checks)
+
+所有開發環節皆必須將安全性納入考量：
+- **敏感資料處理**：嚴禁將任何金鑰（API Keys）、密碼或敏感個資實作於程式碼中，必須一律透過環境變數（`.env`）管理，並提供 `.env.example` 確保其他開發者知曉需配置的變數。
+- **套件資安漏洞**：定期或於 CI/CD 流程中進行相依套件掃描（如 `npm audit` 或 Dependabot），避免引入已知漏洞。
+- **網路攻擊防範**：針對前端輸入與 API 請求，必須實作適當的資料驗證防範注入攻擊（如 SQL Injection、XSS），以及防範跨站請求偽造（CSRF）等常見網路威脅。
+
 ## 治理規範 (Governance)
 
-- 所有 Pull Requests (PRs) 與程式碼變更皆須嚴格遵守上述 8 項核心原則。
+- 所有 Pull Requests (PRs) 與程式碼變更皆須嚴格遵守上述 9 項核心原則。
 - 專案內所有技術文件、規格書、憲章與相關紀錄文件的撰寫，一律使用正體中文並符合台灣當地的習慣用語。
 - 任何架構上的決策或偏離核心原則的實作，皆須具備充分理由並以書面形式明確記錄。
 - 本憲章的效力凌駕於其他非正式的程式碼開發慣例。若需修訂這些原則，必須具備相關文件說明、取得團隊共識，並進行版本號的更新。
 
-**Version**: 1.1.0 | **Ratified**: 2026-03-05 | **Last Amended**: 2026-03-05
+**Version**: 1.2.0 | **Ratified**: 2026-03-05 | **Last Amended**: 2026-03-26

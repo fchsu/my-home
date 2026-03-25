@@ -28,11 +28,11 @@ description: "前端工程師專業個人基地之任務清單"
 **目的**：專案初始化與建立基礎目錄結構。
 
 - [x] T001 在專案根目錄與 `package.json` 初始化 Next.js App Router 專案，並配置 TypeScript 與 TailwindCSS。
-- [ ] T002 在 `.eslintrc.js` 與 `.prettierrc` 設置 ESLint 與 Prettier 以鞏固程式碼品質。
-- [ ] T003 在 `components.json` 與 `src/components/ui/` 設置 shadcn-ui 並安裝基礎元件 (按鈕、卡片等)。
-- [ ] T004 在 `src/store/index.ts` 建立 Zustand 狀態管理架構。
-- [ ] T005 [P] 在 `vitest.config.ts` 建構 Vitest 單元測試環境。
-- [ ] T006 [P] 在 `playwright.config.ts` 建構 Playwright E2E 測試環境。
+- [x] T002 在 `.eslintrc.js` 與 `.prettierrc` 設置 ESLint 與 Prettier 以鞏固程式碼品質。
+- [x] T003 在 `components.json` 與 `src/components/ui/` 設置 shadcn-ui 並安裝基礎元件 (按鈕、卡片等)。
+- [x] T004 在 `src/store/index.ts` 建立 Zustand 狀態管理架構。
+- [x] T005 [P] 在 `vitest.config.ts` 建構 Vitest 單元測試環境。
+- [x] T006 [P] 在 `playwright.config.ts` 建構 Playwright E2E 測試環境。
 
 ---
 
@@ -42,10 +42,10 @@ description: "前端工程師專業個人基地之任務清單"
 
 **⚠️ 極度重要**：此階段未完成前，不可進行其他使用者故事之開發。
 
-- [ ] T007 在 `src/lib/github/api.ts` 建立通用的 GitHub API 串接公用程式。
-- [ ] T008 [P] 在 `src/lib/cache.ts` 配置全域的 ISR 快取機制。
-- [ ] T009 [P] 在 `src/types/index.ts` 定義基礎的 TypeScript 型別介面 (專案 Project、文章 Article、個人簡介 Profile)。
-- [ ] T010 在 `src/app/layout.tsx` 實作標準 SEO 排版元件 (包含共用的標頭與頁腳)。
+- [x] T007 在 `src/lib/github/api.ts` 建立通用的 GitHub API 串接公用程式。
+- [x] T008 [P] 在 `src/lib/cache.ts` 配置全域的 ISR 快取機制。
+- [x] T009 [P] 在 `src/types/index.ts` 定義基礎的 TypeScript 型別介面 (專案 Project、文章 Article、個人簡介 Profile)。
+- [x] T010 在 `src/app/layout.tsx` 實作標準 SEO 排版元件 (包含共用的標頭與頁腳)。
 
 **檢核點**：核心基底已就緒，現在可開始平行開發使用者故事。
 
@@ -59,15 +59,15 @@ description: "前端工程師專業個人基地之任務清單"
 
 ### User Story 1 之自動化測試
 
-- [ ] T011 [P] [US1] 建立 Playwright E2E 測試，針對個人簡介之使用者互動路徑於 `tests/e2e/profile.spec.ts` 撰寫測試案例。
-- [ ] T012 [P] [US1] 在 `tests/unit/portfolio/ProfileHero.test.tsx` 為 ProfileHero 元件撰寫 Vitest 單元測試。
+- [x] T011 [P] [US1] 建立 Playwright E2E 測試，針對個人簡介之使用者互動路徑於 `tests/e2e/profile.spec.ts` 撰寫測試案例。
+- [x] T012 [P] [US1] 在 `tests/unit/portfolio/ProfileHero.test.tsx` 為 ProfileHero 元件撰寫 Vitest 單元測試。
 
 ### User Story 1 之開發實作
 
-- [ ] T013 [P] [US1] 在 `src/lib/data/profile.ts` 建立靜態的 `Profile` 模擬資料實體。
-- [ ] T014 [US1] 在 `src/components/portfolio/ProfileHero.tsx` 實作 `ProfileHero` React 元件。
-- [ ] T015 [US1] 將 `ProfileHero` 元件整合至首頁路由 `src/app/page.tsx`。
-- [ ] T016 [US1] 執行 Vitest 與 Playwright 測試，驗證針對 User Story 1 之所有實作皆順利通過且符合預期。
+- [x] T013 [P] [US1] 在 `src/lib/data/profile.ts` 建立靜態的 `Profile` 模擬資料實體。
+- [x] T014 [US1] 在 `src/components/portfolio/ProfileHero.tsx` 實作 `ProfileHero` React 元件。
+- [x] T015 [US1] 將 `ProfileHero` 元件整合至首頁路由 `src/app/page.tsx`。
+- [x] T016 [US1] 執行 Vitest 與 Playwright 測試，驗證針對 User Story 1 之所有實作皆順利通過且符合預期。
 
 **檢核點**：至此，使用者故事 1 已可獨立運作及測試。
 
@@ -81,16 +81,18 @@ description: "前端工程師專業個人基地之任務清單"
 
 ### User Story 2 之自動化測試
 
-- [ ] T017 [P] [US2] 建立 Playwright E2E 測試，於 `tests/e2e/projects.spec.ts` 模擬專案連結的點擊路徑。
-- [ ] T018 [P] [US2] 於 `tests/unit/portfolio/ProjectCard.test.tsx` 為 `ProjectCard` 撰寫 Vitest 單元測試。
+### User Story 2 之自動化測試
+
+- [x] T017 [P] [US2] 建立 Playwright E2E 測試，於 `tests/e2e/projects.spec.ts` 模擬專案連結的點擊路徑。
+- [x] T018 [P] [US2] 於 `tests/unit/portfolio/ProjectCard.test.tsx` 為 `ProjectCard` 撰寫 Vitest 單元測試。
 
 ### User Story 2 之開發實作
 
-- [ ] T019 [P] [US2] 在 `src/lib/data/projects.ts` 建立靜態的 `Project` 物件陣列。
-- [ ] T020 [US2] 於 `src/components/portfolio/ProjectCard.tsx` 實作子元件 `ProjectCard`。
-- [ ] T021 [US2] 於 `src/components/portfolio/ProjectList.tsx` 實作容器元件 `ProjectList`。
-- [ ] T022 [US2] 將 `ProjectList` 整合進首頁佈局 `src/app/page.tsx` 中。
-- [ ] T023 [US2] 執行 Vitest 與 Playwright 測試，驗證針對 User Story 2 之所有實作皆順利通過。
+- [x] T019 [P] [US2] 在 `src/lib/data/projects.ts` 建立靜態的 `Project` 物件陣列。
+- [x] T020 [US2] 於 `src/components/portfolio/ProjectCard.tsx` 實作子元件 `ProjectCard`。
+- [x] T021 [US2] 於 `src/components/portfolio/ProjectList.tsx` 實作容器元件 `ProjectList`。
+- [x] T022 [US2] 將 `ProjectList` 整合進首頁佈局 `src/app/page.tsx` 中。
+- [x] T023 [US2] 執行 Vitest 與 Playwright 測試，驗證針對 User Story 2 之所有實作皆順利通過。
 
 **檢核點**：至此，使用者故事 1 與 2 皆可獨立且正常運作。
 
